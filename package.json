@@ -1,0 +1,42 @@
+{
+  "name": "recruiter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsup",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:integration": "vitest run src/__tests__/integration/",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/db/migrate.ts",
+    "mcp:dev": "tsx src/mcp/server.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.0",
+    "@huggingface/transformers": "^3.8.1",
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "arctic": "^3.5.0",
+    "dotenv": "^16.4.0",
+    "drizzle-orm": "^0.44.0",
+    "hono": "^4.7.0",
+    "jose": "^6.0.0",
+    "libeam": "^0.1.2",
+    "openai": "^4.80.0",
+    "pino": "^9.6.0",
+    "postgres": "^3.4.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.16",
+    "@types/node": "^22.0.0",
+    "drizzle-kit": "^0.31.0",
+    "pino-pretty": "^13.0.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
